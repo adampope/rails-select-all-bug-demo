@@ -3,7 +3,7 @@ class Company < ActiveRecord::Base
 
   def products_as_hash
     p = self.products
-    p = p.select([:id, :name])
+    #p = p.select([:id, :name])
     ActiveRecord::Base.connection.select_all(p)
   end
 end
