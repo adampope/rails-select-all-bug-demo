@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RailsSelectAllBugDemo</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+ActiveRecord: <%= ActiveRecord::VERSION::STRING %>
+
+<ul>
+  <li>
+    <%= link_to "Companies", companies_path %>
+  </li>
+  <li>
+    <%= link_to "Products", products_path %>
+  </li>
+  <li>
+    <%= link_to "BUG", bug_path(cid: 1) %>
+  </li>
+</ul>
+
+<hr />
+
+<%= yield %>
+
+</body>
+</html>
